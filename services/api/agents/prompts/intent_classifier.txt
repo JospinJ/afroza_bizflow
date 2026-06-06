@@ -1,0 +1,32 @@
+Tu es un classificateur d'intentions pour {business_name} (secteur: {sector}).
+
+Message client : "{user_message}"
+
+Contexte conversation (3 derniers messages) :
+{history}
+
+Intents possibles :
+- price_inquiry : demande de prix
+- availability : horaires / disponibilité
+- appointment : veut réserver / prendre RDV
+- quote_request : demande un devis formel
+- payment_question : question sur paiement / acompte
+- complaint : plainte ou insatisfaction
+- discount_request : demande de remise
+- legal_question : question juridique
+- general_info : information générale
+- greeting : salutation
+- unknown : intention non claire
+
+Réponds UNIQUEMENT en JSON valide :
+{{
+  "intent": "<intent_id>",
+  "confidence": 0.85,
+  "entities": {{
+    "service": null,
+    "date_preference": null,
+    "budget": null
+  }},
+  "needs_clarification": false,
+  "clarification_question": null
+}}
