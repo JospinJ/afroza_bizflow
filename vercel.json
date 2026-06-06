@@ -1,13 +1,14 @@
 {
   "experimentalServices": {
     "web": {
-      "root": "apps/web",
+      "entrypoint": "apps/web",
       "routePrefix": "/",
       "framework": "nextjs"
     },
     "api": {
-      "root": "services/api",
-      "routePrefix": "/_/api"
+      "entrypoint": "services/api/main.py",
+      "routePrefix": "/_/api",
+      "framework": "fastapi"
     }
   }
 }
